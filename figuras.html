@@ -4,12 +4,154 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
     <title>Figuras Geométricas | Curso práctico de Platzi</title>
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --black: #000000;
+            --very-light-pink: #c7c7c7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #b3d6b8;
+            --fondo :  #d4e2d6;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+            --xlg: 25px;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        header {
+            margin: 7px 10px;
+            background-color: var(--hospital-green);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center; 
+            border-radius: 10px;  
+             
+        }
+        header :nth-child(1) {
+            margin: 0;
+            font-size: 30px;
+            font-weight:bold;
+        }
+        header p {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: var(--md);
+        }
+
+        .principal {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .figura {
+            width: 30%;
+            height: 400px;
+            margin: 10px;
+            border-radius: 10px;
+            
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+
+        }
+
+        .title img {
+            width: 50px;
+            height: 50px;
+        }
+
+        title h2 {
+            text-align: center;
+            font-size: var(--md);
+            margin: 10px;
+        }
+        .cuadrado {
+            background-color: var(--very-light-pink);
+        }
+
+        .triangulo {
+            background-color: var(--hospital-green);
+        }
+
+        .circulo {
+            background-color:var(--very-light-pink)
+        }
+        .principal h2 {
+            font-size: var(--lg);
+        }
+        
+    </style>
 </head>
 <body>
-<h1>
-    Fig Geométricas
-</h1>
+<header>
+    <h1>Figuras Geométricas</h1>
+    <p>Este es el primer taller del curso práctico de javaScript</p>
+</header>
+<div class="principal">
+    <section class="figura cuadrado">
+        <div class="title">
+            <img src="https://img.icons8.com/ios-filled/50/000000/square-loader.png" alt="">
+            <h2>Calcula el Área y el Perímetro de un Cuadrado</h2>
+        </div>
+        <div class="form">
+            <form action="">
+                <label for="inputcuadrado">Escribe cuanto mide cada lado de tu cuadrado</label>
+                <input id="inputcuadrado" type="number"/>
+                <button type="button" onclick="calcularPerimetroCuadrado()">Calcular Perímetro</button>
+                <button type="button" onclick="calcularAreaCuadrado()">Calcular el Área</button>
+            </form>
+        </div>   
+    </section>
+
+    <section class="figura triangulo">
+        <div class="title">
+            <img src="https://img.icons8.com/material-outlined/24/000000/triangle-stroked.png" alt="">
+            <h2>Calcula el Área y el Perímetro de un Triángulo Isósceles</h2>
+        </div>
+        <div class="form">
+            <form action="">
+                <div>
+                    <label for="inputlados">Escribe cuanto miden los lados del Triángulo Isosceles</label>
+                    <input id="inputlados" type="number"/>    
+                </div>
+                <div>
+                    <label for="inputbase">Escribe cuanto miden la del Triángulo Isosceles</label>
+                    <input id="inputbase" type="number"/>    
+                </div>
+                
+                <button type="button" onclick="calcularAlturaTriangulo()">Calcular Altura</button>
+                <button type="button" onclick="calcularPerimetroTriangulo()">Calcular Perímetro</button>
+                <button type="button" onclick="calcularAreaTriangulo()">Calcular Área</button>
+            </form>
+        </div>         
+    </section>
+
+    <section class="figura circulo">
+        <div class="title">
+            <img src="https://img.icons8.com/material-outlined/48/000000/filled-circle--v2.png" alt="">
+            <h2>Calcula el Área y la Circunferencia de un Círculo</h2>
+        </div>
+        <div class="form">
+            <form action="">
+                <label for="inputcirculo">Escribe cuanto mide el radio de tu círculo</label>
+                <input id="inputcirculo" type="number"/>
+                <button type="button" onclick="calcularCircunferencia()">Calcular Circunferencia</button>
+                <button type="button" onclick="calcularAreaCirculo()">Calcular el Área</button>
+            </form>
+        </div>  
+    </section>
+</div>
 <script src="./figuras.js"></script>
 </body>
 </html>

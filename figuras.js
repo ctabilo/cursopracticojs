@@ -1,3 +1,32 @@
+function perimetrocuadrado(lado){
+    return lado * 4;
+}
+
+function areacuadrado(lado){
+    return lado * lado;
+}
+
+function perimetrotriangulo(lado1, lado2, base){
+    return lado1 + lado2 + base;
+}
+
+function areatriangulo(altura, base){
+    return (altura * base) / 2;
+}
+
+function diametro(radio){
+    return radio * 2;
+}
+
+function Circunferencia(radio){
+    return diametro(radio) * Math.PI;
+}
+
+function areacirculo (radio){
+    return (radio * radio) * Math.PI;
+}
+
+/*
 console.group("Cuadrados");
     const ladocuadrado = 5;
     console.log("Los lados del cuadrado miden: " + ladocuadrado + "cm");
@@ -47,3 +76,45 @@ console.group("Círculos");
     console.log("el área del circulo es: " + areacirculo);
 
 console.groupEnd();
+*/
+
+function calcularPerimetroCuadrado(){
+    var input = document.getElementById("inputcuadrado");
+    var valor = input.value;
+
+    alert("el perimetro del cuadrado mide: " + perimetrocuadrado(valor));
+}
+
+function calcularAreaCuadrado(){
+    var input = document.getElementById("inputcuadrado");
+    var valor = input.value;
+
+    alert("el área del cuadrado mide: " + areacuadrado(valor));
+}
+
+function calcularAlturaTriangulo(){
+    var inputlados = document.getElementById("inputlados");
+    var inputbase = document.getElementById("inputbase");
+    var valorlados = inputlados.value;
+    var valorbase= inputbase.value;
+
+    alert("La altura del tri: " + areacuadrado(valor));
+}
+
+function calcularPerimetroTriangulo(){
+
+}
+
+function calcularAreaTriangulo(){
+
+}
+
+function calcularCircunferencia() {
+
+
+}
+
+function calcularAreaCirculo(){
+
+
+}
