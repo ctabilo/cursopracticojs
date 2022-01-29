@@ -6,8 +6,11 @@ function areacuadrado(lado){
     return lado * lado;
 }
 
-function perimetrotriangulo(lado1, lado2, base){
-    return lado1 + lado2 + base;
+function alturatriangulo (lado, base){
+    return Math.sqrt((lado * lado) - ((base * base) / 4));
+}
+function perimetrotriangulo(lado , base){
+    return (lado * 2) + base;
 }
 
 function areatriangulo(altura, base){
@@ -18,7 +21,7 @@ function diametro(radio){
     return radio * 2;
 }
 
-function Circunferencia(radio){
+function circunferencia(radio){
     return diametro(radio) * Math.PI;
 }
 
@@ -95,26 +98,43 @@ function calcularAreaCuadrado(){
 function calcularAlturaTriangulo(){
     var inputlados = document.getElementById("inputlados");
     var inputbase = document.getElementById("inputbase");
-    var valorlados = inputlados.value;
-    var valorbase= inputbase.value;
+    var valorlados = parseInt(inputlados.value);
+    var valorbase= parseInt(inputbase.value);
 
-    alert("La altura del tri: " + areacuadrado(valor));
+    alert("La altura del triángulo es: " + alturatriangulo(valorlados , valorbase));
 }
 
 function calcularPerimetroTriangulo(){
+    var inputlados = document.getElementById("inputlados");
+    var inputbase = document.getElementById("inputbase");
+    var valorlados = parseInt(inputlados.value);
+    var valorbase= parseInt(inputbase.value);
 
+    alert("El perímetro del triángulo es: " + perimetrotriangulo(valorlados , valorbase));
 }
 
 function calcularAreaTriangulo(){
+    var inputlados = document.getElementById("inputlados");
+    var inputbase = document.getElementById("inputbase");
+    var valorlados = parseInt(inputlados.value);
+    var valorbase= parseInt(inputbase.value);
+    var altura = alturatriangulo(valorlados , valorbase);
+
+    alert("El área del triángulo es: " + areatriangulo( altura , valorbase));
 
 }
 
 function calcularCircunferencia() {
+    var inputradio = document.getElementById("inputcirculo");
+    var radio = parseInt(inputradio.value);
 
+    alert("La circunferencia es de: " + circunferencia(radio));
 
 }
 
 function calcularAreaCirculo(){
+    var inputradio = document.getElementById("inputcirculo");
+    var valorradio = parseInt(inputradio.value);
 
-
+    alert("El área del circulo es de: " + areacirculo(valorradio));
 }
