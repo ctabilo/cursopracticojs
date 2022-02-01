@@ -85,14 +85,15 @@ function calcularPerimetroCuadrado(){
     var input = document.getElementById("inputcuadrado");
     var valor = input.value;
 
-    alert("el perimetro del cuadrado mide: " + perimetrocuadrado(valor));
+    document.getElementById("perimetrocuadrado").innerText = valor * 4; 
 }
 
 function calcularAreaCuadrado(){
     var input = document.getElementById("inputcuadrado");
     var valor = input.value;
 
-    alert("el área del cuadrado mide: " + areacuadrado(valor));
+    //alert("el área del cuadrado mide: " + areacuadrado(valor));
+    document.getElementById("areacuadrado").innerText = areacuadrado(valor);
 }
 
 function calcularAlturaTriangulo(){
@@ -101,7 +102,8 @@ function calcularAlturaTriangulo(){
     var valorlados = parseInt(inputlados.value);
     var valorbase= parseInt(inputbase.value);
 
-    alert("La altura del triángulo es: " + alturatriangulo(valorlados , valorbase));
+    //alert("La altura del triángulo es: " + alturatriangulo(valorlados , valorbase));
+    document.getElementById("alturatriangulo").innerText = alturatriangulo(valorlados , valorbase)
 }
 
 function calcularPerimetroTriangulo(){
@@ -110,7 +112,8 @@ function calcularPerimetroTriangulo(){
     var valorlados = parseInt(inputlados.value);
     var valorbase= parseInt(inputbase.value);
 
-    alert("El perímetro del triángulo es: " + perimetrotriangulo(valorlados , valorbase));
+    //alert("El perímetro del triángulo es: " + perimetrotriangulo(valorlados , valorbase));
+    document.getElementById("perimetrotriangulo").innerText = perimetrotriangulo(valorlados , valorbase);
 }
 
 function calcularAreaTriangulo(){
@@ -120,15 +123,16 @@ function calcularAreaTriangulo(){
     var valorbase= parseInt(inputbase.value);
     var altura = alturatriangulo(valorlados , valorbase);
 
-    alert("El área del triángulo es: " + areatriangulo( altura , valorbase));
-
+    //alert("El área del triángulo es: " + areatriangulo( altura , valorbase));
+    document.getElementById("areatriangulo").innerText = areatriangulo( altura , valorbase);
 }
 
 function calcularCircunferencia() {
     var inputradio = document.getElementById("inputcirculo");
     var radio = parseInt(inputradio.value);
 
-    alert("La circunferencia es de: " + circunferencia(radio));
+    //alert("La circunferencia es de: " + circunferencia(radio));
+    document.getElementById("circunferencia").innerText = circunferencia(radio);
 
 }
 
@@ -136,5 +140,6 @@ function calcularAreaCirculo(){
     var inputradio = document.getElementById("inputcirculo");
     var valorradio = parseInt(inputradio.value);
 
-    alert("El área del circulo es de: " + areacirculo(valorradio));
+    //alert("El área del circulo es de: " + areacirculo(valorradio));
+    document.getElementById("areacirculo").innerText = areacirculo(valorradio);
 }
