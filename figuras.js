@@ -29,6 +29,9 @@ function areacirculo (radio){
     return (radio * radio) * Math.PI;
 }
 
+function estaVacio(contenido){
+    return (contenido == "");
+}
 /*
 console.group("Cuadrados");
     const ladocuadrado = 5;
@@ -85,7 +88,13 @@ function calcularPerimetroCuadrado(){
     var input = document.getElementById("inputcuadrado");
     var valor = input.value;
 
-    document.getElementById("perimetrocuadrado").innerText = valor * 4; 
+    if (estaVacio(valor)) {
+        alert("Debes ingresar un número para hacer el cálculo");
+    }
+    else {
+       document.getElementById("perimetrocuadrado").innerText = valor * 4;  
+    }
+    
 }
 
 function calcularAreaCuadrado(){
@@ -93,7 +102,12 @@ function calcularAreaCuadrado(){
     var valor = input.value;
 
     //alert("el área del cuadrado mide: " + areacuadrado(valor));
-    document.getElementById("areacuadrado").innerText = areacuadrado(valor);
+    if (estaVacio(valor)) {
+        alert("Debes ingresar un número para hacer el cálculo");
+    }
+    else {
+        document.getElementById("areacuadrado").innerText = areacuadrado(valor);
+    }
 }
 
 function calcularAlturaTriangulo(){

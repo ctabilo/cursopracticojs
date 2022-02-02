@@ -44,8 +44,8 @@ header p {
 }
 
 .seccion {
-    width: 30%;
-    height: 400px;
+    width: 30%px;
+    height:auto;
     margin: 10px;
     border-radius: 10px;
     
@@ -54,6 +54,7 @@ header p {
 .title {
     display: flex;
     align-items: center;
+    margin: 10px;
 
 }
 
@@ -65,7 +66,7 @@ header p {
 title h2 {
     text-align: center;
     font-size: var(--md);
-    margin: 10px;
+    margin: 20px;
 }
 .cuadrado {
     background-color: var(--very-light-pink);
@@ -78,10 +79,65 @@ title h2 {
 .circulo {
     background-color:var(--very-light-pink)
 }
+
 .principal h2 {
     font-size: var(--lg);
+    margin: 10px;
+    text-align: center;
+}
+.inputs {
+    display: flex;
+    flex-direction: row;
+    margin: 8px;
+    justify-content:space-between;
+    align-items: center;
 }
 
+.inputs label {
+    margin: 0 5px 0 5px;
+}
+
+.inputs input {
+    height: 35px;
+    width: 40px;
+    background-color:white;
+    opacity: 50%;
+    border: none;
+    border-radius: 20%;
+    text-align: center;
+
+}
+
+.outputs {
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+    align-items: center;
+}
+
+.outputs button {
+    width: 150px;
+    height: 35px;
+    border: none;   
+    border-radius: 20px;
+    background-color: var(--white);
+    opacity: 70%;
+}
+
+.outputs p {
+    width: 150px;
+    height: 35px;
+    border: none;   
+    border-radius: 20px;
+    background-color: var(--white);
+    opacity: 30%;
+    text-align: center;
+    font-size: var(--md);
+    font-weight: bold; 
+    position: relative;
+    line-height: 2.3;
+
+}
 .resultados {
     font-size: var(--lg);
     font-weight: bold;
@@ -92,3 +148,11 @@ title h2 {
     display: flex;
     flex-direction: column;
 }
+
+@media (max-width: 640px) {
+    .principal {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+  }
