@@ -9,9 +9,13 @@
     <link rel="stylesheet" type="text/css" href="estilo.css"/>
 </head>
 <body>
-<header>
-    <h1>Figuras Geométricas</h1>
-    <p>Este es el primer taller del curso práctico de javaScript</p>
+<header class="cabecera">
+    <img src="https://img.icons8.com/ios/50/000000/diversity.png"/>
+    <div>
+        <h1>Figuras Geométricas</h1>
+        <p>Este es el primer taller del curso práctico de javaScript</p>
+    </div>
+    
 </header>
 <div class="principal">
     <section class="seccion cuadrado">
@@ -86,6 +90,7 @@
                     <label for="inputcirculo">Escribe cuanto mide el radio de tu círculo</label>
                     <input id="inputcirculo" type="number"/>    
                 </div>
+                
                 <div class="outputs">
                     <button type="button" onclick="calcularCircunferencia()">Calcular Circunferencia</button>
                     <p id="circunferencia" class="resultados"></p>
@@ -95,9 +100,6 @@
                     <button type="button" onclick="calcularAreaCirculo()">Calcular el Área</button>
                     <p id="areacirculo" class="resultados"></p>
                 </div>
-
-                
-                
             </form>
         </div>  
     </section>

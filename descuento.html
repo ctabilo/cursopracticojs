@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Descuento.css"/>
+    <title>Precios y Descuentos</title>
+
+</head>
+<body>
+    <header class="cabecera">
+        <img src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/60/000000/external-percentage-ecommerce-vitaliy-gorbachev-lineal-vitaly-gorbachev.png"/>
+        <div class="header">
+            <h1>Porcentajes y Descuentos</h1>
+            <p>Este es el segundo taller del curso práctico de javaScript</p>    
+        </div>
+        
+    </header>
+    <div class="contenido">
+        <section class="ingreso">
+                <div class="titulos">
+                    <img src="https://img.icons8.com/dotty/80/000000/money.png"/>
+                    <h2>Ingresa el precio y calcula tu descuento</h2>
+                </div>
+                <div class="form-container">
+                    <form action="" class="form">
+                        <label for="">Ingresa el precio de tu producto</label>
+                        <input type="number" id="precio">
+                        <label for="">Ingresa el descuento</label>
+                        <input type="number" id="descuento">
+                        <label for="">¿Tienes cupon de descuento? Ingrésalo</label>
+                        <input type="text" id="cupon">
+                    </form>
+                    <button type="button" class="boton" onclick="calcularDescuento()">Calcular Descuentos</button>
+                </div>
+        </section>
+        <section class="resultados">
+            <div class="titulos">
+                <img src="https://img.icons8.com/dotty/80/000000/loyalty-card.png"/>
+                <h2>Resultado de la operación</h2>
+            </div>
+            <div class="descuentos">
+                <label for="">El descuento total es de: </label>
+                <p id="porc_desc"></p>
+                <label for="">El descuento por cupón es de:</label>
+                <p id="descuento_cupon"></p>
+                <label for="">El precio final es de:</label>
+                <p id="precio_final"></p>
+            </div>
+            
+        </section>    
+
+    </div>
+    <script src="./descuento.js"></script>
+</body>
+</html>

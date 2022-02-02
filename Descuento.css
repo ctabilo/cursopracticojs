@@ -1,0 +1,141 @@
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --very-light-pink: #c7c7c7;
+    --text-input-field: #F7F7F7;
+    --hospital-green: #b3d6b8;
+    --fondo :  #d4e2d6;
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+    --xlg: 23px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+header {
+    margin: 10px 10px;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px; 
+    height: 100px; 
+    background-color: var(--hospital-green);
+    align-items: center;
+    justify-content: center;
+}
+.cabecera img {
+    width:auto;
+    margin-right: 20px;
+}
+.header {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;      
+}
+.header :nth-child(1) {
+    margin: 0;
+    font-size: 30px;
+    font-weight:bold;
+}
+header p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: var(--md);
+}
+
+.contenido {
+    display: flex;
+    flex-direction: row;
+}
+
+.contenido section {
+    width: 50%;
+    border-radius: 10px;
+    height: 400px;
+}
+
+.ingreso {
+    margin: 0px 5px 0px 10px;
+    background-color: var(--very-light-pink);
+    
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 10px 20px;
+    grid-gap: 15px 40px;
+    align-items: center;
+}
+
+.form label {
+    font-size: var(--md);
+}
+
+.form input {
+    height: 35px;
+    width:150px;
+    background-color:white;
+    opacity: 50%;
+    border: none;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.boton {
+    width: 150px;
+    height: 35px;
+    border: none;   
+    border-radius: 20px;
+    background-color: var(--white);
+    opacity: 70%;
+    margin-top: 30px;
+    cursor: pointer;
+    
+}
+
+.titulos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 20px
+
+}
+.titulos h2 {
+    margin-left: 20px;
+
+}
+.resultados {
+    margin: 0px 10px 0px 5px;
+    background-color: var(--hospital-green);
+}
+.descuentos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 30px 20px;
+    grid-gap: 15px 40px;
+    align-items: center;
+
+}
+
+.descuentos p {
+    font-size: var(--xlg);
+    font-weight: bold;
+    margin: 0px 0px;
+    text-align: left;
+
+}
