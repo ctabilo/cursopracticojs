@@ -118,7 +118,13 @@ sueldoschile.push({
     Genero: "Femenino",
 });
 
+var bd ="";
 
-sueldoschile.forEach(dato){
-    document.getElementById("datos").innerText = dato;
-};
+sueldoschile.forEach(function(dato){
+       
+    bd= bd + "<br>" + dato.nombre + ", " + dato.Genero + ", " + dato.sueldo + "</br>";
+    console.log(bd);
+});
+
+document.getElementById("datos").innerHTML = bd;
+

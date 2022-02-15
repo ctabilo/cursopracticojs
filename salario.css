@@ -55,7 +55,7 @@ header {
 .contenido section {
     width: 50%;
     border-radius: 10px;
-    height: 400px;
+    height: auto;
 }
 .contenido img {
     width: 50px;
