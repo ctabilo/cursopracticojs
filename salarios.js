@@ -123,8 +123,45 @@ var bd ="";
 sueldoschile.forEach(function(dato){
        
     bd= bd + "<br>" + dato.nombre + ", " + dato.Genero + ", " + dato.sueldo + "</br>";
-    console.log(bd);
 });
 
 document.getElementById("datos").innerHTML = bd;
 
+var sueldos = sueldoschile.map(({sueldo}) => sueldo).sort(function (a , b) { return a - b});
+
+function esPar(numero) {
+    if (numero % 2 == 0) {
+        return true
+    } else {
+        return false
+    }
+}
+
+function calcularPromedio(){
+    document.getElementById("promedio").innerText = sueldos.reduce((acumulador , salario) => acumulador + salario, 0) / sueldoschile.length;
+}
+
+function calcularMediana(){
+    var mitad = parseInt((sueldos.length) / 2);
+    
+    if (esPar(sueldos.length)) {
+        var numero1 = sueldos[mitad];
+        var numero2 = sueldos[mitad - 1];
+
+        document.getElementById("mediana").innerText = parseInt((numero1 + numero2)/2);
+
+    } else {    
+        document.getElementById("mediana").innerText = sueldos[mitad-1];
+    }
+
+}
+
+function calcularModa() {
+    var contador ={};
+
+    sueldos.map(
+        function(valor) {
+            
+        }
+    )
+}
