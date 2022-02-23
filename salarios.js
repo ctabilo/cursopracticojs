@@ -118,6 +118,12 @@ sueldoschile.push({
     Genero: "Femenino",
 });
 
+sueldoschile.push({
+    nombre:"Luisa",
+    sueldo: 850000,
+    Genero: "Femenino",
+});
+
 var bd ="";
 
 sueldoschile.forEach(function(dato){
@@ -138,7 +144,7 @@ function esPar(numero) {
 }
 
 function calcularPromedio(){
-    document.getElementById("promedio").innerText = sueldos.reduce((acumulador , salario) => acumulador + salario, 0) / sueldoschile.length;
+    document.getElementById("promedio").innerText = parseInt(sueldos.reduce((acumulador , salario) => acumulador + salario, 0) / sueldoschile.length);
 }
 
 function calcularMediana(){
@@ -161,7 +167,36 @@ function calcularModa() {
 
     sueldos.map(
         function(valor) {
-            
+            if (contador[valor]) {
+                contador[valor] += 1;
+            } else {
+                contador[valor] = 1;
+            }
         }
     )
+
+    var arrayContador = Object.entries(contador).sort(function (a , b) {return a[1]-b[1]});
+    document.getElementById("moda").innerText = arrayContador[arrayContador.length -1][0];
+    
+}
+
+function calcularTop() {
+    var corte = parseInt((sueldos.length * 90) / 100);
+    var contarsalariosaltos = sueldos.length - corte;
+    
+
+    var salariosAltos = sueldos.splice(corte, contarsalariosaltos);
+
+    var mitadsalarioalto = parseInt((salariosAltos.length) / 2);
+    
+    if (esPar(salariosAltos.length)) {
+        var numero1 = salariosAltos[mitadsalarioalto];
+        var numero2 = salariosAltos[mitadsalarioalto - 1];
+
+        document.getElementById("promediotop10").innerText = parseInt((numero1 + numero2)/2);
+
+    } else {    
+        document.getElementById("promediotop10").innerText = salariosAltos[mitadsalarioalto];
+    }
+
 }
