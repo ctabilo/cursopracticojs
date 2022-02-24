@@ -22,11 +22,17 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin: 10px;
+    background-color: var(--hospital-green);
+    height: 120px;
+    border-radius: 10px;
 
 }
 .header img{
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+
 }
 
 .titulos {
@@ -42,6 +48,7 @@ body {
 .titulos h2 {
     margin: 5px;
     text-align: center;
+    font-size: var(--lg);
 }
 
 .main {
@@ -58,6 +65,7 @@ body {
     flex-direction: row;
     align-items: center;
     text-decoration: none;
+    color: #000;
 }
 
 .seccion a img {
@@ -76,4 +84,16 @@ section {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    background-color: var(--very-light-pink);
+    margin: 5px 10px 10px 5px;
+    border-radius: 10px;
+    padding: 20px;
 }
+
+
+nav {
+    background-color: var(--hospital-green);
+    margin: 5px 5px 10px 10px;
+    border-radius: 10px;
+}
+
